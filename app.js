@@ -16,7 +16,9 @@ function verificarIntento() {
     
     if (numeroDeUsuario === numeroSecreto) {
         asignarTextoElemento('p',`Acertaste el número en ${intentos} ${(intentos === 1) ? 'vez' : 'veces'}`);
+        //<button onclick="verificarIntento();" class="container__boton">Intentar</button>
         document.getElementById('reiniciar').removeAttribute('disabled');
+        document.querySelector('#intentar').setAttribute('disabled','true');
     } else {
         //El usuario no acertó.
         if (numeroDeUsuario > numeroSecreto) {
